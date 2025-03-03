@@ -1,0 +1,24 @@
+<Window x:Class="Galactic.SettingsConfigurationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Device Settings Configuration" Height="600" Width="800" WindowStartupLocation="CenterOwner" Background="#1E1E1E">
+  <Grid Margin="20">
+    <StackPanel>
+      <TextBlock Text="Device Settings Synchronization" FontSize="22" FontWeight="Bold" Foreground="White" Margin="0,0,0,20" TextAlignment="Center"/>
+      <TextBlock x:Name="SettingsText" FontSize="16" Foreground="White" TextWrapping="Wrap" Margin="0,0,0,20"/>
+      <TextBlock Text="Developer Settings" FontSize="20" FontWeight="Bold" Foreground="White" Margin="0,20,0,10"/>
+      <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+        <TextBlock Text="USB Debugging:" FontSize="16" Foreground="White" Width="150"/>
+        <CheckBox x:Name="UsbDebuggingCheckBox" Width="50" IsChecked="True"/>
+      </StackPanel>
+      <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+        <TextBlock Text="Show Taps:" FontSize="16" Foreground="White" Width="150"/>
+        <CheckBox x:Name="ShowTapsCheckBox" Width="50" IsChecked="False"/>
+      </StackPanel>
+      <Button Content="Synchronize Settings" Width="200" Height="40" HorizontalAlignment="Center" Background="#007ACC" Foreground="White" Click="SynchronizeButton_Click"/>
+      <!-- New button to open scan logs folder -->
+      <Button Content="Open Scan Logs Folder" Width="200" Height="40" HorizontalAlignment="Center" Background="#007ACC" Foreground="White" Margin="10" Click="OpenLogsFolderButton_Click"/>
+      <Button Content="Close" Width="100" Height="40" HorizontalAlignment="Center" Background="#007ACC" Foreground="White" Margin="10" Click="CloseButton_Click"/>
+    </StackPanel>
+  </Grid>
+</Window>

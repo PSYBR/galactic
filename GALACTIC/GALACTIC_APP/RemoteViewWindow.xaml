@@ -1,0 +1,10 @@
+<Window x:Class="Galactic.RemoteViewWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Remote Device View" Height="600" Width="400" WindowStartupLocation="CenterOwner" Background="#1E1E1E">
+    <Grid>
+        <Border BorderBrush="DodgerBlue" BorderThickness="2" CornerRadius="10" Margin="10">
+            <Image x:Name="RemoteImage" Stretch="Uniform" />
+        </Border>
+    </Grid>
+</Window>

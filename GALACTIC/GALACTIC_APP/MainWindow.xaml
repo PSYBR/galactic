@@ -1,0 +1,67 @@
+<Window x:Class="Galactic.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Galactic" Height="650" Width="900" WindowStartupLocation="CenterScreen" Background="#1E1E1E">
+  <Grid Margin="10">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    
+    <!-- Top Banner with Official Logo and Device Info -->
+    <StackPanel Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,10">
+      <!-- Official Logo -->
+      <Image Source="official_logo.png" Width="60" Height="60" Margin="10" />
+      <!-- Device Info Panel -->
+      <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+        <TextBlock x:Name="DeviceModelText" FontSize="18" FontWeight="Bold" Foreground="White" Margin="0,0,0,2" />
+        <TextBlock x:Name="DeviceInfoText" FontSize="16" Foreground="White" Margin="0,0,0,2" />
+      </StackPanel>
+      <!-- Remote View Icon Button -->
+      <Button x:Name="RemoteViewButton" Width="40" Height="40" ToolTip="Remote View" Click="RemoteViewButton_Click" Background="Transparent" BorderBrush="Transparent" Margin="10">
+        <Image Source="remote_view_icon.png" Stretch="Uniform" />
+      </Button>
+      <!-- S-Pen Calibration Icon/Button -->
+      <Button x:Name="SPenCalibrateButton" Width="40" Height="40" ToolTip="Calibrate S-Pen" Click="SPenCalibrateButton_Click" Background="Transparent" BorderBrush="Transparent" Margin="10" />
+      <!-- New G-Vision Button -->
+      <Button x:Name="GVisionButton" Content="G-Vision" Width="80" Height="40" ToolTip="Interactive Remote View" Click="GVisionButton_Click" Background="#007ACC" Foreground="White" FontWeight="Bold" Margin="10" />
+    </StackPanel>
+    
+    <!-- Main Content -->
+    <StackPanel Grid.Row="1" Margin="0,20,0,20">
+      <!-- Banner for Memory and Storage Usage -->
+      <Border Background="#333333" Padding="10" CornerRadius="5" Margin="0,0,0,20">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+          <StackPanel Orientation="Vertical" Margin="20">
+            <TextBlock Text="Memory Usage" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" />
+            <ProgressBar x:Name="MemoryProgressBar" Width="250" Height="20" Minimum="0" Maximum="100" Foreground="DodgerBlue" Background="#555555" />
+            <TextBlock x:Name="MemoryText" Foreground="White" HorizontalAlignment="Center" />
+          </StackPanel>
+          <StackPanel Orientation="Vertical" Margin="20">
+            <TextBlock Text="Storage Usage" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" />
+            <ProgressBar x:Name="StorageProgressBar" Width="250" Height="20" Minimum="0" Maximum="100" Foreground="LimeGreen" Background="#555555" />
+            <TextBlock x:Name="StorageText" Foreground="White" HorizontalAlignment="Center" />
+          </StackPanel>
+        </StackPanel>
+      </Border>
+      
+      <!-- Detailed Hardware &amp; Software Information Panel -->
+      <Border Background="#252526" Padding="10" CornerRadius="5">
+        <StackPanel>
+          <TextBlock Text="Hardware &amp; Software Information" FontSize="18" FontWeight="Bold" Foreground="White" Margin="0,0,0,10" />
+          <TextBlock x:Name="HardwareInfoText" FontSize="14" Foreground="White" TextWrapping="Wrap" />
+          <TextBlock x:Name="DiagnosticsText" FontSize="14" Foreground="White" Margin="0,10,0,0" TextWrapping="Wrap" />
+          <TextBlock x:Name="BatteryInfoText" FontSize="14" Foreground="White" Margin="0,10,0,0" />
+          <TextBlock x:Name="TemperatureText" FontSize="14" Foreground="White" Margin="0,10,0,0" />
+        </StackPanel>
+      </Border>
+    </StackPanel>
+    
+    <!-- Bottom Panel for Additional Controls -->
+    <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
+      <Button Content="Run Diagnostics" Width="150" Height="35" Margin="10" Background="#007ACC" Foreground="White" FontWeight="Bold" Click="RunDiagnosticsButton_Click" />
+      <Button Content="Configure Device Settings" Width="200" Height="35" Margin="10" Background="#007ACC" Foreground="White" FontWeight="Bold" Click="ConfigureSettingsButton_Click" />
+    </StackPanel>
+  </Grid>
+</Window>
