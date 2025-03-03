@@ -35,30 +35,40 @@ Galactic is a comprehensive Windows desktop diagnostic and troubleshooting tool 
 
 ### 1. Clone the Repository
 
-```bash
+bash---
+
 git clone <repository-url>
 cd Galactic
-2. Open the Project in VS Code
-Launch Visual Studio Code.
-Go to File > Open Folder… and select the Galactic project folder.
-3. Restore Dependencies
+
+---
+1. Open the Project in VS Code
+   
+2. Launch Visual Studio Code.
+   
+3. Go to File > Open Folder… and select the Galactic project folder.
+
+4. Restore Dependencies
 Open the integrated terminal (View > Terminal) and run:
 
 bash
 Copy
 dotnet restore
-4. Build the Project
+
+5. Build the Project
 Build the project using:
 
 bash
 Copy
 dotnet build
-5. Running and Debugging the Application
-You can run the application directly from the terminal:
+
+6. Running and Debugging the Application
+
++ You can run the application directly from the terminal:
 
 bash
 Copy
 dotnet run
+
 Alternatively, set up a launch configuration in VS Code:
 
 Create a .vscode folder in your project root.
@@ -102,6 +112,7 @@ Copy
     }
   ]
 }
+
 Press F5 to start debugging.
 
 Assets
@@ -112,27 +123,65 @@ remote_view_icon.png
 spen_calibrate_icon.png
 device_screen.png
 chime.wav
-Logging
+
+Logging:
 All diagnostic scans are logged in a local Logs folder. The Settings window includes a button to open this folder for easy access to your scan logs.
 
-Troubleshooting
+Troubleshooting +++
+
 ADB Issues: Run adb devices in the terminal to ensure your device is recognized.
+
 Device Connection: Verify that USB debugging is enabled on your Samsung device.
+
 Build Errors: Ensure all NuGet packages are restored using dotnet restore.
-Future Enhancements
+
+----
+Future Enhancements +++
+
 Integration with Samsung’s official SDK for even more detailed diagnostics.
+
 Live remote view streaming and interactive control.
+
 Enhanced process scanning for malicious or unusual activity.
+
 Additional device configuration options and UI improvements.
-License
+
+License MIT
 © PSYBR Media Technologies. All rights reserved.
+--------------------------
+NEXT UPDATEE++++++++++++++++++++
 
-yaml
-Copy
+## Additional Features for v.1.0.1 (Upcoming)
 
----
+Galactic is expanding its functionality with the following upcoming features:
 
-Simply save the content above as `README.md` in your project root. This file should give any developer a complete overview of the application, its features, and how to set up and develop the project using Visual Studio Code.
+- **Media Import/Export & Gallery Explorer:**  
+  Easily import and export media files, and explore device photos and videos in an interactive gallery.
+
+- **Local Device Backup & App Data Backup:**  
+  Create local backups of device data (media, contacts, app data) and restore them when needed.
+
+- **Music Management & Folder Sync:**  
+  Manage music files on your device and synchronize your music folders with your desktop.
+
+- **Calendar Sync:**  
+  Synchronize your device calendar with a local calendar file for easy management.
+
+- **Wireless ADB Options:**  
+  Enable and disable wireless ADB connections for greater flexibility.
+
+- **Contacts Manager & Backup:**  
+  Backup and manage your device contacts, with options to export as CSV or vCard.
+
+- **Galaxy App Store Integration:**  
+  Browse and install apps directly from an integrated Galaxy App Store interface.
+
+*Note: Many of these features are currently in the planning or development phase and will be available in upcoming releases.*
+
+
+Visit us
+
+https://Psybr.xyz
 
 
 
